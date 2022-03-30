@@ -3,11 +3,13 @@ import {
   ExecFileException,
   ExecFileOptionsWithBufferEncoding,
 } from "child_process";
-import { dirname, resolve } from "path";
+import { dirname, join, resolve } from "path";
 
-export const executable = `${resolve("./dist")}/protoc-gen-doc${
-  process.platform === "win32" ? ".exe" : ""
-}`;
+export const executable = join(
+  resolve(dirname("")),
+  "dist",
+  `protoc-gen-doc${process.platform === "win32" ? ".exe" : ""}`
+);
 
 export const protoc_gen_doc = (
   args: ReadonlyArray<string> | undefined | null,
