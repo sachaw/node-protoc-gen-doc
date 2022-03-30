@@ -3,8 +3,9 @@ import {
   ExecFileException,
   ExecFileOptionsWithBufferEncoding,
 } from "child_process";
+import { dirname, resolve } from "path";
 
-export const executable = `${process.cwd()}/dist/protoc-gen-doc${
+export const executable = `${resolve("./dist")}/protoc-gen-doc${
   process.platform === "win32" ? ".exe" : ""
 }`;
 

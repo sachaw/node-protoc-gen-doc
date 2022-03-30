@@ -67,6 +67,8 @@ const release = releases.find(
 );
 
 if (release) {
+  console.log(executable);
+
   got
     .stream(release.url)
     .pipe(createGunzip())
