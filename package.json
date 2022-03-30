@@ -20,7 +20,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "prettier -w . && eslint src/*.ts",
-    "postinstall": "node dist/postinstall.js"
+    "postinstall": "node dist/postInstall.js"
   },
   "dependencies": {
     "got": "^12.0.3",
